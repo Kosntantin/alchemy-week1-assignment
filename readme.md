@@ -1,13 +1,19 @@
-## ECDSA Node
+## Server/sign.js
 
-This project is an example of using a client and server to facilitate transfers between different addresses. Since there is just a single server on the back-end handling transfers, this is clearly very centralized. We won't worry about distributed consensus for this project.
+Small script used for signing messages. Just replace the values of *message* and *PRIVATE_KEY*
 
-However, something that we would like to incoporate is Public Key Cryptography. By using Elliptic Curve Digital Signatures we can make it so the server only allows transfers that have been signed for by the person who owns the associated address.
+## Changes from original project
+The project now requres the user to provide a valid signiture lined to the sender account's private key
+Test key-pairs - they are randomly generated and are not used in any real system. Use for testing but do no to reuse for anything else
 
-### Video instructions
-For an overview of this project as well as getting started instructions, check out the following video:
+Private Key is: 39013026de6df4b49301c6fbbd32682ddb8e8b74d73f742e6f1a32d8025f7f0b
+Public key is:03718b5d25cebc53acce0048a08a2619faaa16554d702385745629bc178ed14082
 
-https://www.loom.com/share/0d3c74890b8e44a5918c4cacb3f646c4
+Private Key is: 3be6cba329ef59390056e94c688c6849996a85e19d426fd8ba7a4fab45be2e18
+Public key is:03e714b8e8f59ba58b19e4f9728a4117e2047c808d7a114a906ebf9ad0f13f829b
+
+Private Key is: c4aefa7007ddb0f8b0472132fcc74cb523006d5fa27236e98243e52d06638cbf
+Public key is:038a243d6fe34dfe1ca6fe5a2e9f4b418ee195588227851cecfd49a8284f87aad8
  
 ### Client
 
@@ -28,4 +34,3 @@ The server folder contains a node.js server using [express](https://expressjs.co
 
 The application should connect to the default server port (3042) automatically! 
 
-_Hint_ - Use [nodemon](https://www.npmjs.com/package/nodemon) instead of `node` to automatically restart the server on any changes.
