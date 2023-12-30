@@ -7,9 +7,5 @@ const message = "Sending 10 to 1cecfd49a8284f87aad8";
 const hash = keccak256(utf8ToBytes(message))
 
 const sig = secp256k1.sign(hash, PRIVATE_KEY)
-// const sig = new secp256k1.Signature(tmp.r, tmp.s)
-// sig.recovery = tmp.recovery
-// const pubKey = sig.recoverPublicKey(hash)
 
-// console.log(secp256k1.verify(sig, hash, pubKey.toRawBytes()))
 console.log(`Signature is\nr: ${sig.r}\ns: ${sig.s}\nrecovery: ${sig.recovery}`)
